@@ -17,7 +17,7 @@ They don't give `C:\Windows\System32` special treatment.
 
 ## How this reproduction works
 
-We place 3 stub executables at the top of our `$Path`, then use various shells and `just` to call those executables by name. If a shell or `just` fails to respect the `$Path`, and if there's a System32 executable by the same name, it may *not* call our stub, instead calling System32. This is usually not a problem, except that *WSL2 places a bash.exe in System32 and it is not a local bash shell!*
+We place 3 stub executables at the top of our `$Path`, then use various shells and `just` to call those executables by name. If a shell or `just` fails to respect the `$Path`, and if there's a System32 executable by the same name, it may incorrectly call the System32 exe. This is usually not a problem, except that *WSL2 places a bash.exe in System32 and it is not a local bash shell!*
 
 The stubs:
 - `helloworld` will be called correctly in all cases, because there are no other `helloworld` executables anywhere on the `$Path`. (at least, not on my machine)  
