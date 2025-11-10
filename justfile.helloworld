@@ -1,0 +1,7 @@
+set shell := ["helloworld", "-c"]
+default:
+    cat error_message.txt
+
+shebang:
+    #!helloworld -c
+    cat error_message.txt

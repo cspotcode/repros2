@@ -1,0 +1,7 @@
+set shell := ["xcopy", "-c"]
+default:
+    cat error_message.txt
+
+shebang:
+    #!xcopy -c
+    cat error_message.txt

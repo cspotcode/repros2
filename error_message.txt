@@ -1,0 +1,3 @@
+[31mIf you see this, it means 'just' spawned the wrong executable.
+It was supposed to obey $Path and call the shim executable in ./bin/*.
+Instead, it spawned an exe elsewhere on your system that knew how to 'cat' this file.[0m
