@@ -1,0 +1,5 @@
+export Path := "C:/Program Files/Git/bin;" + env('Path')
+
+smoketest:
+    just --justfile justfile.bad
+    just --justfile justfile.good_with_workaround

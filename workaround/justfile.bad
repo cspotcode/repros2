@@ -1,0 +1,5 @@
+set shell := ["bash", "-c"]
+
+@default:
+    echo 'Attempting to execute wslinfo to show if we are in WSL or not.'
+    if wslinfo --version >/dev/null ; then echo "WSL version: $(wslinfo --version) (this proves we're inside WSL, which we should not be)" ; fi
